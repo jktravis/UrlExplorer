@@ -65,14 +65,18 @@ activate the default mode of opening a directory path based on the domain of
 the URL given to the prompt. The same behavior is true for simple command-line
 execution:
 
+```Shell
     python UrlExplorer.py
+```
 
 ## Migration
 To migrate files, a separate text file will need to be populated with the
 development or production URLs for the files that will need to be moved with one link per line. The script will then need to be run from the command-line and given the
 -m flag and the file with the links as an argument. Example:
 
+```Shell
     python UrlExplorer.py -m file_of_links
+```
 
 The script will iterate over the lines of the file, converting the URLs to file
 paths, and copying the respective files to the staging server. For all intents
