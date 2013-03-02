@@ -26,7 +26,7 @@ class UrlExplorer:
 #   https://stage.example.com
 #   http://www.example.com
 #   https://www.example.com
-   domain_regex = re.compile('http(s)?://(dev|stage|www).example.com')
+   domain_regex = re.compile('http:\/\/(dev|stage|www).example.com\/')
    drives = {} # Add drive letters in json file
    error_count = 0 #used to track the numbers of errors when copying files
    archive_dir = '' # Specify an archive directory in the json settings file
@@ -34,9 +34,9 @@ class UrlExplorer:
    migrate = False
 
 #INCLUDE the trailing backslash
-   domains = dict(prod = "https://www.example.com/",
-                  dev = "https://dev.example.com/",
-                  stage = "https://stage.exampl.com/")
+   domains = dict(prod = "http://www.example.com/",
+                  dev = "http://dev.example.com/",
+                  stage = "http://stage.example.com/")
 #**************************************************************
 #End User Configurable Properties
 #**************************************************************
