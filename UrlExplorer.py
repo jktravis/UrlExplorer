@@ -26,7 +26,7 @@ class UrlExplorer:
 #   https://stage.example.com
 #   http://www.example.com
 #   https://www.example.com
-   domain_regex = re.compile('http(s)?://(dev|stage|www).example.com')
+   domain_regex = re.compile('http:\/\/(dev|stage|www).example.com\/')
    drives = {} # Add drive letters in json file
    error_count = 0 #used to track the numbers of errors when copying files
    archive_dir = '' # Specify an archive directory in the json settings file
@@ -34,9 +34,9 @@ class UrlExplorer:
    migrate = False
 
 #INCLUDE the trailing backslash
-   domains = dict(prod = "https://www.example.com/",
-                  dev = "https://dev.example.com/",
-                  stage = "https://stage.exampl.com/")
+   domains = dict(prod = "http://www.example.com/",
+                  dev = "http://dev.example.com/",
+                  stage = "http://stage.example.com/")
 #**************************************************************
 #End User Configurable Properties
 #**************************************************************
@@ -81,13 +81,13 @@ class UrlExplorer:
       except KeyboardInterrupt:
          sys.exit(2)
 
-      except InvalidDomainError:
-         print '\nPlease provide a valid domain and path. Domains recognized are: \n'
-         for key, val in self.domains.iteritems():
-            print val
+      #except InvalidDomainError:
+         #print '\nPlease provide a valid domain and path. Domains recognized are: \n'
+         #for key, val in self.domains.iteritems():
+         #   print val
 
-         raw_input("\n<Press ENTER to exit>\n")
-         sys.exit(2)
+         #raw_input("\n<Press ENTER to exit>\n")
+         #sys.exit(2)
 
       except InvalidCopyError as e:
          print "\n" + 'Unable to open path' + "\n\n" + e.filename + "\n\nPlease confirm your drive mapping settings."
