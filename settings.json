@@ -1,0 +1,8 @@
+{
+	"drives":
+	{
+		"stage_drive" : "X:\\",
+		"dev_drive" : "Y:\\"
+	},
+	"archive_dir" : "archive/"
+}
