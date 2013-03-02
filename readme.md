@@ -29,11 +29,13 @@ Other settings need to be set in the script directly. I am slowly working
 towards moving these settings out to the settings file, but in the meantime,
 they will need to be configured directly. 
 
-__domain_regex__: Set this to the regular expression that will match your domain
+### domain_regex
+Set this to the regular expression that will match your domain
 name. A sample regex has been included that will match production, staging, and
 development URLs. 
 
-__domains__: Set the respective domains that will represent the various
+### domains 
+Set the respective domains that will represent the various
 environments for each system. "Prod" being the public URL, "stage" being the
 place where the files are placed when moving to production, and "dev" being the
 place where you make edits or QA before moving to production. 
