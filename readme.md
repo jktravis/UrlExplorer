@@ -29,11 +29,11 @@ Other settings need to be set in the script directly. I am slowly working
 towards moving these settings out to the settings file, but in the meantime,
 they will need to be configured directly. 
 
-_domain_regex_: Set this to the regular expression that will match your domain
+__domain_regex__: Set this to the regular expression that will match your domain
 name. A sample regex has been included that will match production, staging, and
 development URLs. 
 
-_domains_: Set the respective domains that will represent the various
+__domains__: Set the respective domains that will represent the various
 environments for each system. "Prod" being the public URL, "stage" being the
 place where the files are placed when moving to production, and "dev" being the
 place where you make edits or QA before moving to production. 
@@ -80,9 +80,9 @@ development or production URLs for the files that will need to be moved with one
 
 The script will iterate over the lines of the file, converting the URLs to file
 paths, and copying the respective files to the staging server. For all intents
-and purposes, "staging" here is synonymous with production. _Testing has not be
+and purposes, "staging" here is synonymous with production. __Testing has not be
 performed for environments that contain only two systems (production and development); thus, caution is stressed when using this tool in such
-environments._ The process will create new directories and files, and will overwrite without question. It will not, however, delete files. 
+environments.__ The process will create new directories and files, and will overwrite without question. It will not, however, delete files. 
 
 # License
 This is being distributed under the MIT license.
